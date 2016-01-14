@@ -2,9 +2,9 @@ import java.time.LocalDate;
 
 public class Prescription {
     private LocalDate dispenseDate;
-    private int daysSupply;
+    private long daysSupply;
 
-    public Prescription(LocalDate dispenseDate, int daysSupply) {
+    public Prescription(LocalDate dispenseDate, long daysSupply) {
         this.dispenseDate = dispenseDate;
         this.daysSupply = daysSupply;
     }
@@ -13,7 +13,7 @@ public class Prescription {
         return this.dispenseDate;
     }
 
-    public int getDaysSupply() {
+    public long getDaysSupply() {
         return this.daysSupply;
     }
 }

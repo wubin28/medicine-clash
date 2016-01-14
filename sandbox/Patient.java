@@ -8,7 +8,7 @@ public class Patient {
         this.clashingMedicines = clashingMedicines;
     }
 
-    public int clash(List<String> medicineNames, int daysBeforeToday) {
+    public long clash(List<String> medicineNames, long daysBeforeToday) {
         if (this.clashingMedicines.size() <= 1) {
             return 0;
         }
@@ -36,7 +36,7 @@ public class Patient {
             true : false;
     }
 
-    private int calculateOverlappedDays(List<Medicine> clashingMedicines) {
+    private long calculateOverlappedDays(List<Medicine> clashingMedicines) {
         Prescription prescriptionA = 
             clashingMedicines.get(0).getPrescriptions().get(0);
         LocalDate startA = 
