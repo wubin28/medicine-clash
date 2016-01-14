@@ -6,4 +6,3 @@ if [ $? -eq 0 ]; then
   # remove voluminous stack trace from output
   java -cp $CLASSES org.junit.runner.JUnitCore `ls -1 *Test*.class | grep -v '\\$' | sed 's/\(.*\)\..*/\1/'` | grep -Ev 'org.junit.runner|org.junit.internal|sun.reflect|org.junit.Assert|java.lang.reflect|org.hamcrest'
 fi
-java -version
