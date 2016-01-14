@@ -1,10 +1,5 @@
 PatientTest.java:8: error: cannot find symbol
         Medicine codeine = new Codeine(Arrays.asList(prescription));
-                               ^
-  symbol:   class Codeine
-  location: class PatientTest
-PatientTest.java:8: error: cannot find symbol
-        Medicine codeine = new Codeine(Arrays.asList(prescription));
                                                      ^
   symbol:   variable prescription
   location: class PatientTest
@@ -28,4 +23,4 @@ PatientTest.java:9: error: cannot find symbol
                         ^
   symbol:   variable patient
   location: class PatientTest
-6 errors
+5 errors
