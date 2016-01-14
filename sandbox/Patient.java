@@ -5,5 +5,6 @@ public class Patient {
     }
 
     public int clash(List<String> medicineNames, int daysBeforeToday) {
+        return 0;
     }
 }

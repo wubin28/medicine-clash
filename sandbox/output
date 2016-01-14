@@ -1,4 +1,6 @@
-Patient.java:8: error: missing return statement
-    }
-    ^
-1 error
+JUnit version 4.11-SNAPSHOT-20120416-1530
+.
+Time: 0.05
+
+OK (1 test)
+
