@@ -1,6 +1,4 @@
-PatientTest.java:17: error: cannot find symbol
-            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
-                   ^
-  symbol:   method clash(List<String>,int)
-  location: variable patient of type Patient
+Patient.java:8: error: missing return statement
+    }
+    ^
 1 error
