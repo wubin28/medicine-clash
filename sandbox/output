@@ -1,9 +1,8 @@
-PatientTest.java:12: error: constructor Codeine in class Codeine cannot be applied to given types;
-        Medicine codeine = new Codeine(Arrays.asList(prescription));
-                           ^
-  required: no arguments
-  found: List<Prescription>
-  reason: actual and formal argument lists differ in length
+Codeine.java:2: error: cannot find symbol
+    public Codeine(List<Prescription> prescriptions) {
+                   ^
+  symbol:   class List
+  location: class Codeine
 PatientTest.java:13: error: cannot find symbol
         assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
                         ^
