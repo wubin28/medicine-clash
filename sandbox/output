@@ -1,6 +1,6 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-.
-Time: 0.006
-
-OK (1 test)
-
+PatientTest.java:9: error: cannot find symbol
+        int actual = Hiker.answer();
+                     ^
+  symbol:   variable Hiker
+  location: class PatientTest
+1 error
