@@ -6,7 +6,7 @@ public class PatientTest {
 
     @Test
     public void no_clash_when_not_taking_both_medicines() {
-        assertEquals(0, patient.clash(new ArrayList(codeine, prozac), 90));
+        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
     }
 
     // TODO: no_clash_when_not_taking_both_medicines

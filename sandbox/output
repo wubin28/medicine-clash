@@ -1,16 +1,21 @@
 PatientTest.java:9: error: cannot find symbol
-        assertEquals(0, patient.clash(new ArrayList(codeine, prozac), 90));
+        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
                                                     ^
   symbol:   variable codeine
   location: class PatientTest
 PatientTest.java:9: error: cannot find symbol
-        assertEquals(0, patient.clash(new ArrayList(codeine, prozac), 90));
+        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
                                                              ^
   symbol:   variable prozac
   location: class PatientTest
 PatientTest.java:9: error: cannot find symbol
-        assertEquals(0, patient.clash(new ArrayList(codeine, prozac), 90));
+        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
+                                      ^
+  symbol:   variable Arrays
+  location: class PatientTest
+PatientTest.java:9: error: cannot find symbol
+        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
                         ^
   symbol:   variable patient
   location: class PatientTest
-3 errors
+4 errors
