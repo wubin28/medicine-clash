@@ -1,6 +1,7 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class PatientTest {
 
