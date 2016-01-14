@@ -11,6 +11,6 @@ public class Patient {
         if (this.clashingMedicines.size() == 1) {
             return 0;
         }
-        return -1;
+        return 0;
     }
 }
