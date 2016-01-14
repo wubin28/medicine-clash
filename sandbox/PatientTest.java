@@ -17,8 +17,18 @@ public class PatientTest {
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
     }
 
-    // TODO: no_clash_when_not_taking_both_medicines
-    // TODO: no_clash_when_no_overlap
+    @Test
+    public void no_clash_when_no_overlap() {
+        LocalDate dispenseDate = LocalDate.now().minusDays(30);
+        Prescription prescription = new Prescription(dispenseDate, 30);
+        Medicine codeine = new Medicine("Codeine", 
+            Arrays.asList(prescription));
+        Patient patient = new Patient(Arrays.asList(codeine, prozac));
+
+        assertEquals(0, 
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+    }
+
     // TODO: clash_when_medicines_taken_overlapping
     // TODO: clash_when_medicines_taken_overlapping_start_of_period
     // TODO: clash_when_medicines_taken_overlapping_current_date
