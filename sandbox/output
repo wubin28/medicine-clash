@@ -1,9 +1,10 @@
-PatientTest.java:13: error: cannot find symbol
-        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
-                        ^
-  symbol:   variable patient
-  location: class PatientTest
-PatientTest.java:13: error: cannot find symbol
+PatientTest.java:13: error: constructor Patient in class Patient cannot be applied to given types;
+        Patient patient = new Patient(Arrays.asList(codeine));
+                          ^
+  required: no arguments
+  found: List<Medicine>
+  reason: actual and formal argument lists differ in length
+PatientTest.java:14: error: cannot find symbol
         assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
                                                              ^
   symbol:   variable prozac

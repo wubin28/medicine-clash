@@ -10,6 +10,7 @@ public class PatientTest {
         LocalDate dispenseDate = LocalDate.now().minusDays(30);
         Prescription prescription = new Prescription(dispenseDate, 30);
         Medicine codeine = new Codeine(Arrays.asList(prescription));
+        Patient patient = new Patient(Arrays.asList(codeine));
         assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
     }
 
