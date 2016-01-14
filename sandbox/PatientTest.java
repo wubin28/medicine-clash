@@ -7,8 +7,8 @@ public class PatientTest {
 
     @Test
     public void no_clash_when_not_taking_both_medicines() {
-        LocalDate dispenseDate = LocalDate.now().minusDays(30);
-        Prescription prescription = new Prescription(dispenseDate, 30);
+        Prescription prescription = 
+            new Prescription(LocalDate.now().minusDays(30), 30);
         Medicine codeine = new Medicine("Codeine", 
             Arrays.asList(prescription));
         Patient patient = new Patient(Arrays.asList(codeine));
@@ -19,10 +19,14 @@ public class PatientTest {
 
     @Test
     public void no_clash_when_no_overlap() {
-        LocalDate dispenseDate = LocalDate.now().minusDays(30);
-        Prescription prescription = new Prescription(dispenseDate, 30);
+        Prescription prescriptionCodeine = 
+            new Prescription(LocalDate.now().minusDays(90), 30);
         Medicine codeine = new Medicine("Codeine", 
-            Arrays.asList(prescription));
+            Arrays.asList(prescriptionCodeine));
+        Prescription prescriptionProzac = 
+            new Prescription(LocalDate.now().minusDays(30), 30);
+        Medicine prozac = new Medicine("Prozac", 
+            Arrays.asList(prescriptionProzac));
         Patient patient = new Patient(Arrays.asList(codeine, prozac));
 
         assertEquals(0, 
