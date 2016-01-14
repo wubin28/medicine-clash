@@ -1,8 +1,3 @@
-Patient.java:22: error: cannot find symbol
-            clashingMedicines.get(0).getPrescriptions.get(0);
-                                    ^
-  symbol:   variable getPrescriptions
-  location: class Medicine
 Patient.java:23: error: cannot find symbol
         LocalDate startA = 
         ^
@@ -28,11 +23,6 @@ Patient.java:26: error: cannot find symbol
                          ^
   symbol:   method getDispenseDate()
   location: variable prescriptionA of type Prescription
-Patient.java:28: error: cannot find symbol
-            clashingMedicines.get(1).getPrescriptions.get(0);
-                                    ^
-  symbol:   variable getPrescriptions
-  location: class Medicine
 Patient.java:29: error: cannot find symbol
         LocalDate startB = 
         ^
@@ -58,4 +48,4 @@ Patient.java:32: error: cannot find symbol
                          ^
   symbol:   method getDispenseDate()
   location: variable prescriptionB of type Prescription
-12 errors
+10 errors

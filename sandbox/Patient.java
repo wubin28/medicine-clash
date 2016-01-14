@@ -19,13 +19,13 @@ public class Patient {
 
     private boolean isOverlapped(List<Medicine> clashingMedicines) {
         Prescription prescriptionA = 
-            clashingMedicines.get(0).getPrescriptions.get(0);
+            clashingMedicines.get(0).getPrescriptions().get(0);
         LocalDate startA = 
             prescriptionA.getDispenseDate();
         LocalDate endA = 
             prescriptionA.getDispenseDate().plusDays(prescriptionA.getDaysSupply());
         Prescription prescriptionB = 
-            clashingMedicines.get(1).getPrescriptions.get(0);
+            clashingMedicines.get(1).getPrescriptions().get(0);
         LocalDate startB = 
             prescriptionB.getDispenseDate();
         LocalDate endB = 
