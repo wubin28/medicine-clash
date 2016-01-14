@@ -50,6 +50,7 @@ public class Patient {
         LocalDate endB = 
             prescriptionB.getDispenseDate().plusDays(prescriptionB.getDaysSupply());
 
-        return startA.until(endB, ChronoUnit.DAYS);
+        // return startA.until(endB, ChronoUnit.DAYS);
+        return startB.until(endA, ChronoUnit.DAYS);
     }
 }
