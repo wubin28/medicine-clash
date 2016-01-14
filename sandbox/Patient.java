@@ -35,4 +35,21 @@ public class Patient {
         return !(startA.isAfter(endB) || endA.isBefore(startB)) ? 
             true : false;
     }
+
+    private int calculateOverlappedDays(List<Medicine> clashingMedicines) {
+        Prescription prescriptionA = 
+            clashingMedicines.get(0).getPrescriptions().get(0);
+        LocalDate startA = 
+            prescriptionA.getDispenseDate();
+        LocalDate endA = 
+            prescriptionA.getDispenseDate().plusDays(prescriptionA.getDaysSupply());
+        Prescription prescriptionB = 
+            clashingMedicines.get(1).getPrescriptions().get(0);
+        LocalDate startB = 
+            prescriptionB.getDispenseDate();
+        LocalDate endB = 
+            prescriptionB.getDispenseDate().plusDays(prescriptionB.getDaysSupply());
+
+        return startA.until(endB, ChronoUnit.DAYS);
+    }
 }
