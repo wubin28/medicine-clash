@@ -1,6 +1,6 @@
 Patient.java:14: error: cannot find symbol
-        if (!isOverlapped()) {
+        if (!isOverlapped(clashingMedicines)) {
              ^
-  symbol:   method isOverlapped()
+  symbol:   method isOverlapped(List<Medicine>)
   location: class Patient
 1 error

@@ -11,7 +11,7 @@ public class Patient {
         if (this.clashingMedicines.size() <= 1) {
             return 0;
         }
-        if (!isOverlapped()) {
+        if (!isOverlapped(clashingMedicines)) {
             return 0;
         }
         return -1;
