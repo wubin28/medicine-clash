@@ -9,7 +9,8 @@ public class PatientTest {
     public void no_clash_when_not_taking_both_medicines() {
         LocalDate dispenseDate = LocalDate.now().minusDays(30);
         Prescription prescription = new Prescription(dispenseDate, 30);
-        Medicine codeine = new Codeine(Arrays.asList(prescription));
+        Medicine codeine = new Medicine(Medicine.CODEINE, 
+            Arrays.asList(prescription));
         Patient patient = new Patient(Arrays.asList(codeine));
         assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
     }

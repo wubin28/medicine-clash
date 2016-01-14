@@ -1,6 +1,11 @@
-PatientTest.java:14: error: cannot find symbol
+PatientTest.java:12: error: cannot find symbol
+        Medicine codeine = new Medicine(Medicine.CODEINE, 
+                                                ^
+  symbol:   variable CODEINE
+  location: class Medicine
+PatientTest.java:15: error: cannot find symbol
         assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
                                                              ^
   symbol:   variable prozac
   location: class PatientTest
-1 error
+2 errors
