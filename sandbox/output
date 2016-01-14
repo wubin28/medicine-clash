@@ -1,15 +1,5 @@
 PatientTest.java:8: error: cannot find symbol
         Prescription prescription = new Prescription(dispenseDate, 30);
-        ^
-  symbol:   class Prescription
-  location: class PatientTest
-PatientTest.java:8: error: cannot find symbol
-        Prescription prescription = new Prescription(dispenseDate, 30);
-                                        ^
-  symbol:   class Prescription
-  location: class PatientTest
-PatientTest.java:8: error: cannot find symbol
-        Prescription prescription = new Prescription(dispenseDate, 30);
                                                      ^
   symbol:   variable dispenseDate
   location: class PatientTest
@@ -33,4 +23,4 @@ PatientTest.java:10: error: cannot find symbol
                         ^
   symbol:   variable patient
   location: class PatientTest
-7 errors
+5 errors
