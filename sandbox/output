@@ -1,6 +1,11 @@
-Patient.java:53: error: cannot find symbol
+Patient.java:3: error: cannot find symbol
+import java.time.ChronoUnit;
+                ^
+  symbol:   class ChronoUnit
+  location: package java.time
+Patient.java:54: error: cannot find symbol
         return startA.until(endB, ChronoUnit.DAYS);
                                   ^
   symbol:   variable ChronoUnit
   location: class Patient
-1 error
+2 errors
