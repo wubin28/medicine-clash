@@ -5,6 +5,7 @@ public class PatientTest {
 
     @Test
     public void no_clash_when_not_taking_both_medicines() {
+        LocalDate dispenseDate = LocalDate.now().minusDays(30);
         Prescription prescription = new Prescription(dispenseDate, 30);
         Medicine codeine = new Codeine(Arrays.asList(prescription));
         assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
