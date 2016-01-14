@@ -4,10 +4,8 @@ import static org.junit.Assert.*;
 public class PatientTest {
 
     @Test
-    public void life_the_universe_and_everything() {
-        int expected = 42;
-        int actual = Hiker.answer();
-        assertEquals(expected, actual);
+    public void no_clash_when_not_taking_both_medicines() {
+        assertEquals(0, 0);
     }
 
     // TODO: no_clash_when_not_taking_both_medicines
