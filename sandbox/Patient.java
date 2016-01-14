@@ -1,10 +1,9 @@
 import java.util.List;
 import java.time.LocalDate;
-import java.time.ChronoUnit;
+import java.time.temporal.ChronoUnit;
 
 public class Patient {
     private List<Medicine> clashingMedicines;
-
     public Patient(List<Medicine> clashingMedicines) {
         this.clashingMedicines = clashingMedicines;
     }

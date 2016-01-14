@@ -1,11 +1,4 @@
-Patient.java:3: error: cannot find symbol
-import java.time.ChronoUnit;
-                ^
-  symbol:   class ChronoUnit
-  location: package java.time
-Patient.java:54: error: cannot find symbol
+Patient.java:53: error: incompatible types: possible lossy conversion from long to int
         return startA.until(endB, ChronoUnit.DAYS);
-                                  ^
-  symbol:   variable ChronoUnit
-  location: class Patient
-2 errors
+                           ^
+1 error
