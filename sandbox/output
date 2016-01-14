@@ -1,26 +1,4 @@
-Prescription.java:2: error: cannot find symbol
-    public Prescription(LocalDate dispenseDate, int daysSupply) {
-                        ^
-  symbol:   class LocalDate
-  location: class Prescription
-PatientTest.java:11: error: cannot find symbol
-        Medicine codeine = new Codeine(Arrays.asList(prescription));
-                                       ^
-  symbol:   variable Arrays
-  location: class PatientTest
-PatientTest.java:12: error: cannot find symbol
-        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
-                                                             ^
-  symbol:   variable prozac
-  location: class PatientTest
-PatientTest.java:12: error: cannot find symbol
-        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
-                                      ^
-  symbol:   variable Arrays
-  location: class PatientTest
-PatientTest.java:12: error: cannot find symbol
-        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
-                        ^
-  symbol:   variable patient
-  location: class PatientTest
-5 errors
+Prescription.java:1: error: ';' expected
+import java.time.LocalDate
+                          ^
+1 error
