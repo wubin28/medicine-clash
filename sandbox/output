@@ -1,6 +1,6 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-...
-Time: 0.106
-
-OK (3 tests)
-
+Patient.java:18: error: cannot find symbol
+        return calculateOverlappedDays(clashingMedicines);
+               ^
+  symbol:   method calculateOverlappedDays(List<Medicine>)
+  location: class Patient
+1 error
