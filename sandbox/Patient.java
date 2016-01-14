@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Patient {
-    public Patient(List<Medicine> medicines) {
+    public Patient(List<Medicine> clashingMedicines) {
     }
 
     public int clash(List<String> medicineNames, int daysBeforeToday) {
