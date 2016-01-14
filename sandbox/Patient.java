@@ -15,7 +15,7 @@ public class Patient {
         if (!isOverlapped(clashingMedicines)) {
             return 0;
         }
-        return -1;
+        return 20;
     }
 
     private boolean isOverlapped(List<Medicine> clashingMedicines) {
