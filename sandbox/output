@@ -1,6 +1,61 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-..
-Time: 0.033
-
-OK (2 tests)
-
+Patient.java:22: error: cannot find symbol
+            clashingMedicines.get(0).getPrescriptions.get(0);
+                                    ^
+  symbol:   variable getPrescriptions
+  location: class Medicine
+Patient.java:23: error: cannot find symbol
+        LocalDate startA = 
+        ^
+  symbol:   class LocalDate
+  location: class Patient
+Patient.java:24: error: cannot find symbol
+            prescriptionA.getDispenseDate();
+                         ^
+  symbol:   method getDispenseDate()
+  location: variable prescriptionA of type Prescription
+Patient.java:25: error: cannot find symbol
+        LocalDate endA = 
+        ^
+  symbol:   class LocalDate
+  location: class Patient
+Patient.java:26: error: cannot find symbol
+            prescriptionA.getDispenseDate().plusDays(prescriptionA.getDaysSupply());
+                                                                  ^
+  symbol:   method getDaysSupply()
+  location: variable prescriptionA of type Prescription
+Patient.java:26: error: cannot find symbol
+            prescriptionA.getDispenseDate().plusDays(prescriptionA.getDaysSupply());
+                         ^
+  symbol:   method getDispenseDate()
+  location: variable prescriptionA of type Prescription
+Patient.java:28: error: cannot find symbol
+            clashingMedicines.get(1).getPrescriptions.get(0);
+                                    ^
+  symbol:   variable getPrescriptions
+  location: class Medicine
+Patient.java:29: error: cannot find symbol
+        LocalDate startB = 
+        ^
+  symbol:   class LocalDate
+  location: class Patient
+Patient.java:30: error: cannot find symbol
+            prescriptionB.getDispenseDate();
+                         ^
+  symbol:   method getDispenseDate()
+  location: variable prescriptionB of type Prescription
+Patient.java:31: error: cannot find symbol
+        LocalDate endB = 
+        ^
+  symbol:   class LocalDate
+  location: class Patient
+Patient.java:32: error: cannot find symbol
+            prescriptionB.getDispenseDate().plusDays(prescriptionB.getDaysSupply());
+                                                                  ^
+  symbol:   method getDaysSupply()
+  location: variable prescriptionB of type Prescription
+Patient.java:32: error: cannot find symbol
+            prescriptionB.getDispenseDate().plusDays(prescriptionB.getDaysSupply());
+                         ^
+  symbol:   method getDispenseDate()
+  location: variable prescriptionB of type Prescription
+12 errors
