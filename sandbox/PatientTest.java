@@ -36,11 +36,11 @@ public class PatientTest {
     @Test
     public void clash_when_medicines_taken_overlapping() {
         Prescription prescriptionCodeine = 
-            new Prescription(LocalDate.now().minusDays(30), 30);
+            new Prescription(LocalDate.now().minusDays(40), 30);
         Medicine codeine = new Medicine("Codeine", 
             Arrays.asList(prescriptionCodeine));
         Prescription prescriptionProzac = 
-            new Prescription(LocalDate.now().minusDays(40), 30);
+            new Prescription(LocalDate.now().minusDays(30), 30);
         Medicine prozac = new Medicine("Prozac", 
             Arrays.asList(prescriptionProzac));
         Patient patient = new Patient(Arrays.asList(codeine, prozac));

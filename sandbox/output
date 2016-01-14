@@ -1,6 +1,11 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
-...
-Time: 0.117
+..E.
+Time: 0.115
+There was 1 failure:
+1) clash_when_medicines_taken_overlapping(PatientTest)
+java.lang.AssertionError: expected:<20> but was:<40>
+	at PatientTest.clash_when_medicines_taken_overlapping(PatientTest.java:48)
 
-OK (3 tests)
+FAILURES!!!
+Tests run: 3,  Failures: 1
 
