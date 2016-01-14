@@ -12,7 +12,9 @@ public class PatientTest {
         Medicine codeine = new Medicine("Codeine", 
             Arrays.asList(prescription));
         Patient patient = new Patient(Arrays.asList(codeine));
-        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
+
+        assertEquals(0, 
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
     }
 
     // TODO: no_clash_when_not_taking_both_medicines

@@ -1,6 +1,6 @@
-PatientTest.java:15: error: cannot find symbol
-        assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
-                                                             ^
-  symbol:   variable prozac
-  location: class PatientTest
+PatientTest.java:17: error: cannot find symbol
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+                   ^
+  symbol:   method clash(List<String>,int)
+  location: variable patient of type Patient
 1 error
