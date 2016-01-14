@@ -1,7 +1,5 @@
 
 public class Patient {
-
-    public static int answer() {
-        return 6 * 7;
+    public Patient(List<Medicine> medicines) {
     }
 }

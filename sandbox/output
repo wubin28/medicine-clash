@@ -1,9 +1,8 @@
-PatientTest.java:13: error: constructor Patient in class Patient cannot be applied to given types;
-        Patient patient = new Patient(Arrays.asList(codeine));
-                          ^
-  required: no arguments
-  found: List<Medicine>
-  reason: actual and formal argument lists differ in length
+Patient.java:3: error: cannot find symbol
+    public Patient(List<Medicine> medicines) {
+                   ^
+  symbol:   class List
+  location: class Patient
 PatientTest.java:14: error: cannot find symbol
         assertEquals(0, patient.clash(Arrays.asList(codeine, prozac), 90));
                                                              ^
