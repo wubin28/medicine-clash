@@ -5,6 +5,9 @@ public class Patient {
     }
 
     public int clash(List<String> medicineNames, int daysBeforeToday) {
-        return 0;
+        if (this.clashingMedicines.size() == 1) {
+            return 0;
+        }
+        return -1;
     }
 }
