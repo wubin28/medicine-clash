@@ -13,7 +13,6 @@ public class Patient {
 
     public long clash(List<String> medicineNames, long daysBeforeToday
             , LocalDate now) {
-        System.out.println(">>>entering clash()");
         if (this.medicine == null || this.clashingMedicine == null) {
             return 0;
         }
@@ -28,15 +27,10 @@ public class Patient {
     private boolean isOverlapped(Medicine medicine
             , Medicine clashingMedicine
             , long daysBeforeToday, LocalDate now) {
-        System.out.println(">>>entering isOverlapped()");
         LocalDate startA = getStartDate(medicine);
         LocalDate endA = getEndDate(medicine);
         LocalDate startB = getStartDate(clashingMedicine);
         LocalDate endB = getEndDate(clashingMedicine);
-        System.out.println(">>>startA: " + startA);
-        System.out.println(">>>endA: " + endA);
-        System.out.println(">>>startB: " + startB);
-        System.out.println(">>>endB: " + endB);
         
         LocalDate dateAfterConsidered = 
             now.minusDays(daysBeforeToday);
@@ -48,7 +42,6 @@ public class Patient {
             , Medicine clashingMedicine
             , long daysBeforeToday
             , LocalDate now) {
-        System.out.println(">>>entering calculateOverlappedDays()");
         LocalDate startA = getStartDate(medicine);
         LocalDate endA = getEndDate(medicine);
         LocalDate startB = getStartDate(clashingMedicine);
@@ -67,7 +60,6 @@ public class Patient {
             }
             return startA.until(endB, ChronoUnit.DAYS);
         } else {
-            System.out.println(">>>startA is not after startB");
             if (dateAfterConsidered.isAfter(startB) &&
                     dateAfterConsidered.isBefore(endA)) {
                 return dateAfterConsidered.until(endA, ChronoUnit.DAYS);
