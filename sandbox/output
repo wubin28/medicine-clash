@@ -1,4 +1,13 @@
-Patient.java:27: error: <identifier> expected
-            , daysBeforeToday) {
-                             ^
-1 error
+Patient.java:18: error: method isOverlapped in class Patient cannot be applied to given types;
+        if (!isOverlapped(medicine, clashingMedicine)) {
+             ^
+  required: Medicine,Medicine,long
+  found: Medicine,Medicine
+  reason: actual and formal argument lists differ in length
+Patient.java:21: error: method calculateOverlappedDays in class Patient cannot be applied to given types;
+        return calculateOverlappedDays(medicine, clashingMedicine
+               ^
+  required: Medicine,Medicine
+  found: Medicine,Medicine,long
+  reason: actual and formal argument lists differ in length
+2 errors
