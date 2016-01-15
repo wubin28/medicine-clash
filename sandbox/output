@@ -1,11 +1,6 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
-.....E
-Time: 0.091
-There was 1 failure:
-1) clash_when_medicines_taken_overlapping_current_date(PatientTest)
-java.lang.AssertionError: expected:<1> but was:<115>
-	at PatientTest.clash_when_medicines_taken_overlapping_current_date(PatientTest.java:85)
+.....
+Time: 0.117
 
-FAILURES!!!
-Tests run: 5,  Failures: 1
+OK (5 tests)
 

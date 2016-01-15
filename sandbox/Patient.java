@@ -56,13 +56,17 @@ public class Patient {
             }
             if (now.isAfter(startA) &&
                     now.isBefore(endB)) {
-                return dateAfterConsidered.until(endB, ChronoUnit.DAYS);
+                return startA.until(now, ChronoUnit.DAYS);
             }
             return startA.until(endB, ChronoUnit.DAYS);
         } else {
             if (dateAfterConsidered.isAfter(startB) &&
                     dateAfterConsidered.isBefore(endA)) {
                 return dateAfterConsidered.until(endA, ChronoUnit.DAYS);
+            }
+            if (now.isAfter(startB) &&
+                    now.isBefore(endA)) {
+                return startB.until(now, ChronoUnit.DAYS);
             }
             return startB.until(endA, ChronoUnit.DAYS);
         }
