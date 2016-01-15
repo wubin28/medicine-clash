@@ -60,6 +60,7 @@ public class Patient {
             }
             return startA.until(endB, ChronoUnit.DAYS);
         } else {
+            System.out.println(">>>startA is not after startB");
             if (dateAfterConsidered.isAfter(startB) &&
                     dateAfterConsidered.isBefore(endA)) {
                 return dateAfterConsidered.until(endA, ChronoUnit.DAYS);
