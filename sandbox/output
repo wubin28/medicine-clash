@@ -1,19 +1,15 @@
-PatientTest.java:14: error: constructor Patient in class Patient cannot be applied to given types;
-        Patient patient = new Patient(codeine, null);
+Patient.java:15: error: cannot find symbol
+        if (this.clashingMedicines.size() <= 1) {
+                ^
+  symbol: variable clashingMedicines
+Patient.java:18: error: cannot find symbol
+        if (!isOverlapped(clashingMedicines)) {
                           ^
-  required: List<Medicine>
-  found: Medicine,<null>
-  reason: actual and formal argument lists differ in length
-PatientTest.java:30: error: constructor Patient in class Patient cannot be applied to given types;
-        Patient patient = new Patient(codeine, prozac);
-                          ^
-  required: List<Medicine>
-  found: Medicine,Medicine
-  reason: actual and formal argument lists differ in length
-PatientTest.java:46: error: constructor Patient in class Patient cannot be applied to given types;
-        Patient patient = new Patient(codeine, prozac);
-                          ^
-  required: List<Medicine>
-  found: Medicine,Medicine
-  reason: actual and formal argument lists differ in length
+  symbol:   variable clashingMedicines
+  location: class Patient
+Patient.java:21: error: cannot find symbol
+        return calculateOverlappedDays(clashingMedicines);
+                                       ^
+  symbol:   variable clashingMedicines
+  location: class Patient
 3 errors

@@ -3,10 +3,12 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class Patient {
-    private List<Medicine> clashingMedicines;
+    private Medicine medicine;
+    private Medicine clashingMedicine;
 
-    public Patient(List<Medicine> clashingMedicines) {
-        this.clashingMedicines = clashingMedicines;
+    public Patient(Medicine medicine, Medicine clashingMedicine) {
+        this.medicine = medicine;
+        this.clashingMedicine = clashingMedicine;
     }
 
     public long clash(List<String> medicineNames, long daysBeforeToday) {
