@@ -23,19 +23,10 @@ public class Patient {
 
     private boolean isOverlapped(Medicine medicine
             , Medicine clashingMedicine) {
-        LocalDate startA = 
-            medicine.getPrescriptions().get(0).getDispenseDate();
-        LocalDate endA = 
-            medicine.getPrescriptions().get(0).getDispenseDate()
-                .plusDays(medicine.getPrescriptions().get(0)
-                    .getDaysSupply());
-
-        LocalDate startB = 
-            clashingMedicine.getPrescriptions().get(0).getDispenseDate();
-        LocalDate endB = 
-            clashingMedicine.getPrescriptions().get(0).getDispenseDate()
-                .plusDays(clashingMedicine.getPrescriptions().get(0)
-                    .getDaysSupply());
+        LocalDate startA = getStartDate(medicine);
+        LocalDate endA = getEndDate(medicine);
+        LocalDate startB = getStartDate(clashingMedicine);
+        LocalDate endB = getEndDate(clashingMedicine);
         
         return !(startA.isAfter(endB) || endA.isBefore(startB)) ? 
             true : false;
@@ -44,18 +35,9 @@ public class Patient {
     private long calculateOverlappedDays(Medicine medicine
             , Medicine clashingMedicine) {
         LocalDate startA = getStartDate(medicine);
-        LocalDate endAA = getEndDate(medicine);
-        LocalDate endA = 
-            medicine.getPrescriptions().get(0).getDispenseDate()
-                .plusDays(medicine.getPrescriptions().get(0)
-                    .getDaysSupply());
-
+        LocalDate endA = getEndDate(medicine);
         LocalDate startB = getStartDate(clashingMedicine);
-        LocalDate endBB = getEndDate(clashingMedicine);
-        LocalDate endB = 
-            clashingMedicine.getPrescriptions().get(0).getDispenseDate()
-                .plusDays(clashingMedicine.getPrescriptions().get(0)
-                    .getDaysSupply());
+        LocalDate endB = getEndDate(clashingMedicine);
 
         if (startA.isAfter(startB)) {
             return startA.until(endB, ChronoUnit.DAYS);
@@ -66,5 +48,11 @@ public class Patient {
 
     private LocalDate getStartDate(Medicine medicine) {
         return medicine.getPrescriptions().get(0).getDispenseDate();
+    }
+
+    private LocalDate getEndDate(Medicine medicine) {
+        return medicine.getPrescriptions().get(0).getDispenseDate()
+            .plusDays(medicine.getPrescriptions().get(0)
+                .getDaysSupply());
     }
 }
