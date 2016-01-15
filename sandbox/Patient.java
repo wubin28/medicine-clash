@@ -72,12 +72,20 @@ public class Patient {
         }
     }
 
+    /**
+     * Assume that the prescriptions are consecutive 
+     *   and sorted by date ascendingly.
+     */
     private LocalDate getStartDate(Medicine medicine) {
         LocalDate startDate = 
             medicine.getPrescriptions().get(0).getDispenseDate();
         return startDate;
     }
 
+    /**
+     * Assume that the prescriptions are consecutive 
+     *   and sorted by date ascendingly.
+     */
     private LocalDate getEndDate(Medicine medicine) {
         int lastIndex = medicine.getPrescriptions().size() - 1;
         LocalDate endDate = 
