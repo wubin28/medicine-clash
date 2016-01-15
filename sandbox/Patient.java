@@ -28,8 +28,8 @@ public class Patient {
         LocalDate startB = getStartDate(clashingMedicine);
         LocalDate endB = getEndDate(clashingMedicine);
         
-        return !(startA.isAfter(endB) || endA.isBefore(startB)) ? 
-            true : false;
+        return !(startA.isAfter(endB) || endA.isBefore(startB)) 
+            ? true : false;
     }
 
     private long calculateOverlappedDays(Medicine medicine
