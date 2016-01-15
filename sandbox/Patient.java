@@ -34,6 +34,9 @@ public class Patient {
         LocalDate startB = getStartDate(clashingMedicine);
         LocalDate endB = getEndDate(clashingMedicine);
         System.out.println(">>>startA: " + startA);
+        System.out.println(">>>endA: " + endA);
+        System.out.println(">>>startB: " + startB);
+        System.out.println(">>>endB: " + endB);
         
         LocalDate dateAfterConsidered = 
             now.minusDays(daysBeforeToday);
