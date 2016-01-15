@@ -86,7 +86,7 @@ public class PatientTest {
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
-    @Test @Ignore
+    @Test
     public void clash_when_medicines_taken_continuously_with_the_same_period() {
         LocalDate now = LocalDate.now();
         Medicine codeine = new Medicine("Codeine", 
