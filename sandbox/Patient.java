@@ -5,7 +5,7 @@ import java.time.temporal.ChronoUnit;
 public class Patient {
     private Medicine medicine;
     private Medicine clashingMedicine;
-
+    
     public Patient(Medicine medicine, Medicine clashingMedicine) {
         this.medicine = medicine;
         this.clashingMedicine = clashingMedicine;
@@ -27,12 +27,15 @@ public class Patient {
             medicine.getPrescriptions().get(0).getDispenseDate();
         LocalDate endA = 
             medicine.getPrescriptions().get(0).getDispenseDate()
-                .plusDays(prescriptionA.getDaysSupply());
+                .plusDays(medicine.getPrescriptions().get(0)
+                    .getDaysSupply());
+
         LocalDate startB = 
             clashingMedicine.getPrescriptions().get(0).getDispenseDate();
         LocalDate endB = 
             clashingMedicine.getPrescriptions().get(0).getDispenseDate()
-                .plusDays(clashingMedicine.getPrescriptions().get(0).getDaysSupply());
+                .plusDays(clashingMedicine.getPrescriptions().get(0)
+                    .getDaysSupply());
         
         return !(startA.isAfter(endB) || endA.isBefore(startB)) ? 
             true : false;
