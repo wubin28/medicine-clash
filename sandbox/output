@@ -1,6 +1,21 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-...
-Time: 0.114
-
-OK (3 tests)
-
+Patient.java:46: error: cannot find symbol
+        LocalDate startAA = getStartDate(medicine);
+                            ^
+  symbol:   method getStartDate(Medicine)
+  location: class Patient
+Patient.java:49: error: cannot find symbol
+        LocalDate endAA = getEndDate(medicine);
+                          ^
+  symbol:   method getEndDate(Medicine)
+  location: class Patient
+Patient.java:55: error: cannot find symbol
+        LocalDate startBB = getStartDate(clashingMedicine);
+                            ^
+  symbol:   method getStartDate(Medicine)
+  location: class Patient
+Patient.java:58: error: cannot find symbol
+        LocalDate endBB = getEndDate(clashingMedicine);
+                          ^
+  symbol:   method getEndDate(Medicine)
+  location: class Patient
+4 errors
