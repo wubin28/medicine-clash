@@ -15,7 +15,7 @@ public class PatientTest {
         Patient patient = new Patient(codeine, null);
 
         assertEquals(0, 
-            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
     @Test
@@ -31,7 +31,7 @@ public class PatientTest {
         Patient patient = new Patient(codeine, prozac);
 
         assertEquals(0, 
-            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
     @Test
@@ -47,7 +47,7 @@ public class PatientTest {
         Patient patient = new Patient(codeine, prozac);
 
         assertEquals(20, 
-            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
     @Test
@@ -63,7 +63,7 @@ public class PatientTest {
         Patient patient = new Patient(codeine, prozac);
 
         assertEquals(1, 
-            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
     @Test
@@ -79,7 +79,7 @@ public class PatientTest {
         Patient patient = new Patient(codeine, prozac);
 
         assertEquals(1, 
-            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
     // TODO: clash_when_medicines_taken_continuously_with_the_same_period
