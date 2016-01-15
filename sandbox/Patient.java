@@ -43,18 +43,14 @@ public class Patient {
 
     private long calculateOverlappedDays(Medicine medicine
             , Medicine clashingMedicine) {
-        LocalDate startAA = getStartDate(medicine);
-        LocalDate startA = 
-            medicine.getPrescriptions().get(0).getDispenseDate();
+        LocalDate startA = getStartDate(medicine);
         LocalDate endAA = getEndDate(medicine);
         LocalDate endA = 
             medicine.getPrescriptions().get(0).getDispenseDate()
                 .plusDays(medicine.getPrescriptions().get(0)
                     .getDaysSupply());
 
-        LocalDate startBB = getStartDate(clashingMedicine);
-        LocalDate startB = 
-            clashingMedicine.getPrescriptions().get(0).getDispenseDate();
+        LocalDate startB = getStartDate(clashingMedicine);
         LocalDate endBB = getEndDate(clashingMedicine);
         LocalDate endB = 
             clashingMedicine.getPrescriptions().get(0).getDispenseDate()
@@ -68,4 +64,7 @@ public class Patient {
         }
     }
 
+    private LocalDate getStartDate(Medicine medicine) {
+        return medicine.getPrescriptions().get(0).getDispenseDate();
+    }
 }

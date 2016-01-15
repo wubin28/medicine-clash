@@ -1,21 +1,11 @@
-Patient.java:46: error: cannot find symbol
-        LocalDate startAA = getStartDate(medicine);
-                            ^
-  symbol:   method getStartDate(Medicine)
-  location: class Patient
-Patient.java:49: error: cannot find symbol
+Patient.java:47: error: cannot find symbol
         LocalDate endAA = getEndDate(medicine);
                           ^
   symbol:   method getEndDate(Medicine)
   location: class Patient
-Patient.java:55: error: cannot find symbol
-        LocalDate startBB = getStartDate(clashingMedicine);
-                            ^
-  symbol:   method getStartDate(Medicine)
-  location: class Patient
-Patient.java:58: error: cannot find symbol
+Patient.java:54: error: cannot find symbol
         LocalDate endBB = getEndDate(clashingMedicine);
                           ^
   symbol:   method getEndDate(Medicine)
   location: class Patient
-4 errors
+2 errors
