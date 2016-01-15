@@ -25,10 +25,10 @@ public class Patient {
     private boolean isOverlapped(Medicine medicine
             , Medicine clashingMedicine
             , long daysBeforeToday) {
-        LocalDate startA = getStartDate(medicine);
-        LocalDate endA = getEndDate(medicine);
-        LocalDate startB = getStartDate(clashingMedicine);
-        LocalDate endB = getEndDate(clashingMedicine);
+        LocalDate startA = getStartDate(medicine, daysBeforeToday);
+        LocalDate endA = getEndDate(medicine, daysBeforeToday);
+        LocalDate startB = getStartDate(clashingMedicine, daysBeforeToday);
+        LocalDate endB = getEndDate(clashingMedicine, daysBeforeToday);
         
         return !(startA.isAfter(endB) || endA.isBefore(startB)) 
             ? true : false;
@@ -37,10 +37,10 @@ public class Patient {
     private long calculateOverlappedDays(Medicine medicine
             , Medicine clashingMedicine
             , long daysBeforeToday) {
-        LocalDate startA = getStartDate(medicine);
-        LocalDate endA = getEndDate(medicine);
-        LocalDate startB = getStartDate(clashingMedicine);
-        LocalDate endB = getEndDate(clashingMedicine);
+        LocalDate startA = getStartDate(medicine, daysBeforeToday);
+        LocalDate endA = getEndDate(medicine, daysBeforeToday);
+        LocalDate startB = getStartDate(clashingMedicine, daysBeforeToday);
+        LocalDate endB = getEndDate(clashingMedicine, daysBeforeToday);
 
         if (startA.isAfter(startB)) {
             return startA.until(endB, ChronoUnit.DAYS);
@@ -49,11 +49,11 @@ public class Patient {
         }
     }
 
-    private LocalDate getStartDate(Medicine medicine) {
+    private LocalDate getStartDate(Medicine medicine, long daysBeforeToday) {
         return medicine.getPrescriptions().get(0).getDispenseDate();
     }
 
-    private LocalDate getEndDate(Medicine medicine) {
+    private LocalDate getEndDate(Medicine medicine, long daysBeforeToday) {
         return medicine.getPrescriptions().get(0).getDispenseDate()
             .plusDays(medicine.getPrescriptions().get(0)
                 .getDaysSupply());
