@@ -50,22 +50,18 @@ public class Patient {
     }
 
     private LocalDate getStartDate(Medicine medicine, long daysBeforeToday) {
-        LocalDate dateAfterConsidered = 
-            LocalDate.now().minusDays(daysBeforeToday);
+//        LocalDate dateAfterConsidered = 
+//            LocalDate.now().minusDays(daysBeforeToday);
         LocalDate startDate = 
             medicine.getPrescriptions().get(0).getDispenseDate();
-        return dateAfterConsidered.isAfter(startDate) ?
-            dateAfterConsidered : startDate;
+        return startDate;
     }
 
     private LocalDate getEndDate(Medicine medicine, long daysBeforeToday) {
-        LocalDate dateAfterConsidered = 
-            LocalDate.now().minusDays(daysBeforeToday);
         LocalDate endDate = 
             medicine.getPrescriptions().get(0).getDispenseDate()
             .plusDays(medicine.getPrescriptions().get(0)
                 .getDaysSupply());
-        return dateAfterConsidered.isAfter(endDate) ?
-            dateAfterConsidered : endDate;
+        return endDate;
     }
 }
