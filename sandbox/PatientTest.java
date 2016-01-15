@@ -86,6 +86,26 @@ public class PatientTest {
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
-    // TODO: clash_when_medicines_taken_continuously_with_the_same_period
+    @Test
+    public void clash_when_medicines_taken_continuously_with_the_same_period() {
+        LocalDate now = LocalDate.now();
+        Medicine codeine = new Medicine("Codeine", 
+            Arrays.asList(
+                new Prescription(now.minusDays(30), 30)
+                , new Prescription(now.minusDays(60), 30)
+                , new Prescription(now.minusDays(90), 30)
+            ));
+        Medicine prozac = new Medicine("Prozac", 
+            Arrays.asList(
+                new Prescription(now.minusDays(30), 30)
+                , new Prescription(now.minusDays(60), 30)
+                , new Prescription(now.minusDays(90), 30)
+            ));
+        Patient patient = new Patient(codeine, prozac);
+
+        assertEquals(90, 
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
+    }
+
     // TODO: clash_when_medicines_taken_continuously_with_partial_overlap
 }
