@@ -4,6 +4,7 @@ import java.time.temporal.ChronoUnit;
 
 public class Patient {
     private List<Medicine> clashingMedicines;
+
     public Patient(List<Medicine> clashingMedicines) {
         this.clashingMedicines = clashingMedicines;
     }

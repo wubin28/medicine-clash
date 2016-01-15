@@ -11,7 +11,7 @@ public class PatientTest {
             new Prescription(LocalDate.now().minusDays(30), 30);
         Medicine codeine = new Medicine("Codeine", 
             Arrays.asList(prescription));
-        Patient patient = new Patient(Arrays.asList(codeine));
+        Patient patient = new Patient(codeine, null);
 
         assertEquals(0, 
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
@@ -27,7 +27,7 @@ public class PatientTest {
             new Prescription(LocalDate.now().minusDays(30), 30);
         Medicine prozac = new Medicine("Prozac", 
             Arrays.asList(prescriptionProzac));
-        Patient patient = new Patient(Arrays.asList(codeine, prozac));
+        Patient patient = new Patient(codeine, prozac);
 
         assertEquals(0, 
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
@@ -43,7 +43,7 @@ public class PatientTest {
             new Prescription(LocalDate.now().minusDays(40), 30);
         Medicine prozac = new Medicine("Prozac", 
             Arrays.asList(prescriptionProzac));
-        Patient patient = new Patient(Arrays.asList(codeine, prozac));
+        Patient patient = new Patient(codeine, prozac);
 
         assertEquals(20, 
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
