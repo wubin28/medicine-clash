@@ -39,7 +39,8 @@ public class Patient {
 
     private long calculateOverlappedDays(Medicine medicine
             , Medicine clashingMedicine
-            , long daysBeforeToday) {
+            , long daysBeforeToday
+            , LocalDate now) {
         LocalDate startA = getStartDate(medicine);
         LocalDate endA = getEndDate(medicine);
         LocalDate startB = getStartDate(clashingMedicine);

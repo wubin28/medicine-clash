@@ -1,18 +1,9 @@
-Patient.java:49: error: cannot find symbol
-            now.minusDays(daysBeforeToday);
-            ^
-  symbol:   variable now
-  location: class Patient
-Patient.java:55: error: cannot find symbol
-            if (now.isAfter(startA) &&
-                ^
-  symbol:   variable now
-  location: class Patient
-Patient.java:56: error: cannot find symbol
-                    now.isBefore(endB)) {
-                    ^
-  symbol:   variable now
-  location: class Patient
+Patient.java:22: error: method calculateOverlappedDays in class Patient cannot be applied to given types;
+        return calculateOverlappedDays(medicine, clashingMedicine
+               ^
+  required: Medicine,Medicine,long,LocalDate
+  found: Medicine,Medicine,long
+  reason: actual and formal argument lists differ in length
 PatientTest.java:17: error: method clash in class Patient cannot be applied to given types;
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
                    ^
@@ -43,4 +34,4 @@ PatientTest.java:81: error: method clash in class Patient cannot be applied to g
   required: List<String>,long,LocalDate
   found: List<String>,int
   reason: actual and formal argument lists differ in length
-8 errors
+6 errors
