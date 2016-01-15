@@ -18,11 +18,13 @@ public class Patient {
         if (!isOverlapped(medicine, clashingMedicine)) {
             return 0;
         }
-        return calculateOverlappedDays(medicine, clashingMedicine);
+        return calculateOverlappedDays(medicine, clashingMedicine
+            , daysBeforeToday);
     }
 
     private boolean isOverlapped(Medicine medicine
-            , Medicine clashingMedicine) {
+            , Medicine clashingMedicine
+            , daysBeforeToday) {
         LocalDate startA = getStartDate(medicine);
         LocalDate endA = getEndDate(medicine);
         LocalDate startB = getStartDate(clashingMedicine);
