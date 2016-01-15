@@ -1,14 +1,11 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
-.E.>>>entering calculateOverlappedDays()
-..>>>entering calculateOverlappedDays()
-..>>>entering calculateOverlappedDays()
-
-Time: 0.118
+I.EIIII
+Time: 0.098
 There was 1 failure:
 1) clash_when_medicines_taken_continuously_with_the_same_period(PatientTest)
 java.lang.AssertionError: expected:<90> but was:<0>
-	at PatientTest.clash_when_medicines_taken_continuously_with_the_same_period(PatientTest.java:106)
+	at PatientTest.clash_when_medicines_taken_continuously_with_the_same_period(PatientTest.java:103)
 
 FAILURES!!!
-Tests run: 6,  Failures: 1
+Tests run: 1,  Failures: 1
 
