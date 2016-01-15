@@ -12,7 +12,7 @@ public class Patient {
     }
 
     public long clash(List<String> medicineNames, long daysBeforeToday) {
-        if (this.clashingMedicines.size() <= 1) {
+        if (this.medicine == null || this.clashingMedicine == null) {
             return 0;
         }
         if (!isOverlapped(clashingMedicines)) {
