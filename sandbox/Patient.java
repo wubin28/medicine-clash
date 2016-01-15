@@ -21,7 +21,7 @@ public class Patient {
         return calculateOverlappedDays(medicine, clashingMedicine);
     }
 
-    private boolean isOverlapped(medicine, clashingMedicine) {
+    private boolean isOverlapped(Medicine medicine, Medicine clashingMedicine) {
         Prescription prescriptionA = 
             medicine.getPrescriptions().get(0);
         LocalDate startA = 

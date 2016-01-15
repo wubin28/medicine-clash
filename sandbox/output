@@ -1,7 +1,7 @@
-Patient.java:24: error: <identifier> expected
-    private boolean isOverlapped(medicine, clashingMedicine) {
-                                         ^
-Patient.java:24: error: <identifier> expected
-    private boolean isOverlapped(medicine, clashingMedicine) {
-                                                           ^
-2 errors
+Patient.java:21: error: method calculateOverlappedDays in class Patient cannot be applied to given types;
+        return calculateOverlappedDays(medicine, clashingMedicine);
+               ^
+  required: List<Medicine>
+  found: Medicine,Medicine
+  reason: actual and formal argument lists differ in length
+1 error
