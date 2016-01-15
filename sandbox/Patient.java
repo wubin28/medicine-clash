@@ -25,11 +25,13 @@ public class Patient {
     private boolean isOverlapped(Medicine medicine
             , Medicine clashingMedicine
             , long daysBeforeToday) {
-        LocalDate startA = getStartDate(medicine, daysBeforeToday);
-        LocalDate endA = getEndDate(medicine, daysBeforeToday);
-        LocalDate startB = getStartDate(clashingMedicine, daysBeforeToday);
-        LocalDate endB = getEndDate(clashingMedicine, daysBeforeToday);
+        LocalDate startA = getStartDate(medicine);
+        LocalDate endA = getEndDate(medicine);
+        LocalDate startB = getStartDate(clashingMedicine);
+        LocalDate endB = getEndDate(clashingMedicine);
         
+        LocalDate dateAfterConsidered = 
+            LocalDate.now().minusDays(daysBeforeToday);
         return !(startA.isAfter(endB) || endA.isBefore(startB)) 
             ? true : false;
     }
