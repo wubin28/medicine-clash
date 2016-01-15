@@ -11,11 +11,12 @@ public class Patient {
         this.clashingMedicine = clashingMedicine;
     }
 
-    public long clash(List<String> medicineNames, long daysBeforeToday) {
+    public long clash(List<String> medicineNames, long daysBeforeToday
+            , LocalDate now) {
         if (this.medicine == null || this.clashingMedicine == null) {
             return 0;
         }
-        if (!isOverlapped(medicine, clashingMedicine, daysBeforeToday)) {
+        if (!isOverlapped(medicine, clashingMedicine, daysBeforeToday, now)) {
             return 0;
         }
         return calculateOverlappedDays(medicine, clashingMedicine

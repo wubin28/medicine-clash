@@ -1,22 +1,46 @@
-Patient.java:18: error: method isOverlapped in class Patient cannot be applied to given types;
-        if (!isOverlapped(medicine, clashingMedicine, daysBeforeToday)) {
-             ^
-  required: Medicine,Medicine,long,LocalDate
-  found: Medicine,Medicine,long
-  reason: actual and formal argument lists differ in length
-Patient.java:48: error: cannot find symbol
+Patient.java:49: error: cannot find symbol
             now.minusDays(daysBeforeToday);
             ^
   symbol:   variable now
   location: class Patient
-Patient.java:54: error: cannot find symbol
+Patient.java:55: error: cannot find symbol
             if (now.isAfter(startA) &&
                 ^
   symbol:   variable now
   location: class Patient
-Patient.java:55: error: cannot find symbol
+Patient.java:56: error: cannot find symbol
                     now.isBefore(endB)) {
                     ^
   symbol:   variable now
   location: class Patient
-4 errors
+PatientTest.java:17: error: method clash in class Patient cannot be applied to given types;
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+                   ^
+  required: List<String>,long,LocalDate
+  found: List<String>,int
+  reason: actual and formal argument lists differ in length
+PatientTest.java:33: error: method clash in class Patient cannot be applied to given types;
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+                   ^
+  required: List<String>,long,LocalDate
+  found: List<String>,int
+  reason: actual and formal argument lists differ in length
+PatientTest.java:49: error: method clash in class Patient cannot be applied to given types;
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+                   ^
+  required: List<String>,long,LocalDate
+  found: List<String>,int
+  reason: actual and formal argument lists differ in length
+PatientTest.java:65: error: method clash in class Patient cannot be applied to given types;
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+                   ^
+  required: List<String>,long,LocalDate
+  found: List<String>,int
+  reason: actual and formal argument lists differ in length
+PatientTest.java:81: error: method clash in class Patient cannot be applied to given types;
+            patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
+                   ^
+  required: List<String>,long,LocalDate
+  found: List<String>,int
+  reason: actual and formal argument lists differ in length
+8 errors
