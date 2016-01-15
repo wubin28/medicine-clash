@@ -1,9 +1,9 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
 .E...
-Time: 0.119
+Time: 0.123
 There was 1 failure:
 1) clash_when_medicines_taken_overlapping_start_of_period(PatientTest)
-java.lang.AssertionError: expected:<1> but was:<2>
+java.lang.AssertionError: expected:<1> but was:<29>
 	at PatientTest.clash_when_medicines_taken_overlapping_start_of_period(PatientTest.java:64)
 
 FAILURES!!!
