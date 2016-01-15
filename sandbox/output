@@ -1,11 +1,6 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
-.......E
-Time: 0.12
-There was 1 failure:
-1) clash_when_medicines_taken_continuously_with_partial_overlap(PatientTest)
-java.lang.AssertionError: expected:<90> but was:<60>
-	at PatientTest.clash_when_medicines_taken_continuously_with_partial_overlap(PatientTest.java:126)
+.......
+Time: 0.115
 
-FAILURES!!!
-Tests run: 7,  Failures: 1
+OK (7 tests)
 

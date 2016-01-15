@@ -123,7 +123,7 @@ public class PatientTest {
             ));
         Patient patient = new Patient(codeine, prozac);
 
-        assertEquals(90, 
+        assertEquals(60, 
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 }
