@@ -1,11 +1,7 @@
-Patient.java:18: error: cannot find symbol
-        if (!isOverlapped(clashingMedicines)) {
-                          ^
-  symbol:   variable clashingMedicines
-  location: class Patient
-Patient.java:21: error: cannot find symbol
-        return calculateOverlappedDays(clashingMedicines);
-                                       ^
-  symbol:   variable clashingMedicines
-  location: class Patient
+Patient.java:24: error: <identifier> expected
+    private boolean isOverlapped(medicine, clashingMedicine) {
+                                         ^
+Patient.java:24: error: <identifier> expected
+    private boolean isOverlapped(medicine, clashingMedicine) {
+                                                           ^
 2 errors

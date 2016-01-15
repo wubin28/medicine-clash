@@ -15,21 +15,21 @@ public class Patient {
         if (this.medicine == null || this.clashingMedicine == null) {
             return 0;
         }
-        if (!isOverlapped(clashingMedicines)) {
+        if (!isOverlapped(medicine, clashingMedicine)) {
             return 0;
         }
-        return calculateOverlappedDays(clashingMedicines);
+        return calculateOverlappedDays(medicine, clashingMedicine);
     }
 
-    private boolean isOverlapped(List<Medicine> clashingMedicines) {
+    private boolean isOverlapped(medicine, clashingMedicine) {
         Prescription prescriptionA = 
-            clashingMedicines.get(0).getPrescriptions().get(0);
+            medicine.getPrescriptions().get(0);
         LocalDate startA = 
             prescriptionA.getDispenseDate();
         LocalDate endA = 
             prescriptionA.getDispenseDate().plusDays(prescriptionA.getDaysSupply());
         Prescription prescriptionB = 
-            clashingMedicines.get(1).getPrescriptions().get(0);
+            clashingMedicine.getPrescriptions().get(0);
         LocalDate startB = 
             prescriptionB.getDispenseDate();
         LocalDate endB = 
