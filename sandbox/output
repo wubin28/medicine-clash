@@ -1,17 +1,14 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
 I.>>>entering clash()
 >>>entering isOverlapped()
->>>startA: 2015-12-16
->>>endA: 2015-11-16
->>>startB: 2015-12-16
->>>endB: 2015-11-16
-EIIII
-Time: 0.1
-There was 1 failure:
-1) clash_when_medicines_taken_continuously_with_the_same_period(PatientTest)
-java.lang.AssertionError: expected:<90> but was:<0>
-	at PatientTest.clash_when_medicines_taken_continuously_with_the_same_period(PatientTest.java:106)
+>>>startA: 2015-10-17
+>>>endA: 2016-01-15
+>>>startB: 2015-10-17
+>>>endB: 2016-01-15
+>>>entering calculateOverlappedDays()
+>>>startA is not after startB
+IIII
+Time: 0.101
 
-FAILURES!!!
-Tests run: 1,  Failures: 1
+OK (1 test)
 

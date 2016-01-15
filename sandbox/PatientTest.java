@@ -91,15 +91,15 @@ public class PatientTest {
         LocalDate now = LocalDate.now();
         Medicine codeine = new Medicine("Codeine", 
             Arrays.asList(
-                new Prescription(now.minusDays(30), 30)
+                new Prescription(now.minusDays(90), 30)
                 , new Prescription(now.minusDays(60), 30)
-                , new Prescription(now.minusDays(90), 30)
+                , new Prescription(now.minusDays(30), 30)
             ));
         Medicine prozac = new Medicine("Prozac", 
             Arrays.asList(
-                new Prescription(now.minusDays(30), 30)
+                new Prescription(now.minusDays(90), 30)
                 , new Prescription(now.minusDays(60), 30)
-                , new Prescription(now.minusDays(90), 30)
+                , new Prescription(now.minusDays(30), 30)
             ));
         Patient patient = new Patient(codeine, prozac);
 
