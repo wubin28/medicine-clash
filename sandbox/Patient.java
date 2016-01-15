@@ -47,8 +47,16 @@ public class Patient {
         LocalDate dateAfterConsidered = 
             LocalDate.now().minusDays(daysBeforeToday);
         if (startA.isAfter(startB)) {
+            if (dateAfterConsidered.isAfter(startA) &&
+                    dateAfterConsidered.isBefore(endB)) {
+                return dateAfterConsidered.until(endB, ChronoUnit.DAYS);
+            }
             return startA.until(endB, ChronoUnit.DAYS);
         } else {
+            if (dateAfterConsidered.isAfter(startB) &&
+                    dateAfterConsidered.isBefore(endA)) {
+                return dateAfterConsidered.until(endA, ChronoUnit.DAYS);
+            }
             return startB.until(endA, ChronoUnit.DAYS);
         }
     }
