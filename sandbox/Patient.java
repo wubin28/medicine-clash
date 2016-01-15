@@ -23,20 +23,16 @@ public class Patient {
 
     private boolean isOverlapped(Medicine medicine
             , Medicine clashingMedicine) {
-        Prescription prescriptionA = 
-            medicine.getPrescriptions().get(0);
         LocalDate startA = 
-            prescriptionA.getDispenseDate();
+            medicine.getPrescriptions().get(0).getDispenseDate();
         LocalDate endA = 
-            prescriptionA.getDispenseDate()
+            medicine.getPrescriptions().get(0).getDispenseDate()
                 .plusDays(prescriptionA.getDaysSupply());
-        Prescription prescriptionB = 
-            clashingMedicine.getPrescriptions().get(0);
         LocalDate startB = 
-            prescriptionB.getDispenseDate();
+            clashingMedicine.getPrescriptions().get(0).getDispenseDate();
         LocalDate endB = 
-            prescriptionB.getDispenseDate()
-                .plusDays(prescriptionB.getDaysSupply());
+            clashingMedicine.getPrescriptions().get(0).getDispenseDate()
+                .plusDays(clashingMedicine.getPrescriptions().get(0).getDaysSupply());
         
         return !(startA.isAfter(endB) || endA.isBefore(startB)) ? 
             true : false;
