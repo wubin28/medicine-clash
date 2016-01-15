@@ -79,9 +79,10 @@ public class Patient {
     }
 
     private LocalDate getEndDate(Medicine medicine) {
+        int lastIndex = medicine.getPrescriptions().size - 1;
         LocalDate endDate = 
-            medicine.getPrescriptions().get(0).getDispenseDate()
-            .plusDays(medicine.getPrescriptions().get(0)
+            medicine.getPrescriptions().get(lastIndex).getDispenseDate()
+            .plusDays(medicine.getPrescriptions().get(lastIndex)
                 .getDaysSupply());
         return endDate;
     }
