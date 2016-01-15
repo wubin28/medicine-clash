@@ -13,6 +13,7 @@ public class Patient {
 
     public long clash(List<String> medicineNames, long daysBeforeToday
             , LocalDate now) {
+        System.out.println(">>>entering clash()");
         if (this.medicine == null || this.clashingMedicine == null) {
             return 0;
         }

@@ -1,6 +1,7 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
-I.EIIII
-Time: 0.098
+I.>>>entering clash()
+EIIII
+Time: 0.096
 There was 1 failure:
 1) clash_when_medicines_taken_continuously_with_the_same_period(PatientTest)
 java.lang.AssertionError: expected:<90> but was:<0>
