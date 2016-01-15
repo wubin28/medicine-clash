@@ -1,6 +1,11 @@
-Patient.java:82: error: cannot find symbol
-        int lastIndex = medicine.getPrescriptions().size - 1;
-                                                   ^
-  symbol:   variable size
-  location: interface List<Prescription>
-1 error
+JUnit version 4.11-SNAPSHOT-20120416-1530
+.E.....
+Time: 0.122
+There was 1 failure:
+1) clash_when_medicines_taken_continuously_with_the_same_period(PatientTest)
+java.lang.AssertionError: expected:<90> but was:<0>
+	at PatientTest.clash_when_medicines_taken_continuously_with_the_same_period(PatientTest.java:106)
+
+FAILURES!!!
+Tests run: 6,  Failures: 1
+
