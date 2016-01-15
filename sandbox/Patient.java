@@ -31,7 +31,7 @@ public class Patient {
         LocalDate endB = getEndDate(clashingMedicine);
         
         LocalDate dateAfterConsidered = 
-            LocalDate.now().minusDays(daysBeforeToday);
+            now.minusDays(daysBeforeToday);
         return !(startA.isAfter(endB) || endA.isBefore(startB)) 
             ? true : false;
     }
@@ -45,10 +45,14 @@ public class Patient {
         LocalDate endB = getEndDate(clashingMedicine);
 
         LocalDate dateAfterConsidered = 
-            LocalDate.now().minusDays(daysBeforeToday);
+            now.minusDays(daysBeforeToday);
         if (startA.isAfter(startB)) {
             if (dateAfterConsidered.isAfter(startA) &&
                     dateAfterConsidered.isBefore(endB)) {
+                return dateAfterConsidered.until(endB, ChronoUnit.DAYS);
+            }
+            if (now.isAfter(startA) &&
+                    now.isBefore(endB)) {
                 return dateAfterConsidered.until(endB, ChronoUnit.DAYS);
             }
             return startA.until(endB, ChronoUnit.DAYS);

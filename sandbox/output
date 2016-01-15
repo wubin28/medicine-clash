@@ -1,11 +1,21 @@
-JUnit version 4.11-SNAPSHOT-20120416-1530
-.....E
-Time: 0.117
-There was 1 failure:
-1) clash_when_medicines_taken_overlapping_current_date(PatientTest)
-java.lang.AssertionError: expected:<1> but was:<26>
-	at PatientTest.clash_when_medicines_taken_overlapping_current_date(PatientTest.java:80)
-
-FAILURES!!!
-Tests run: 5,  Failures: 1
-
+Patient.java:34: error: cannot find symbol
+            now.minusDays(daysBeforeToday);
+            ^
+  symbol:   variable now
+  location: class Patient
+Patient.java:48: error: cannot find symbol
+            now.minusDays(daysBeforeToday);
+            ^
+  symbol:   variable now
+  location: class Patient
+Patient.java:54: error: cannot find symbol
+            if (now.isAfter(startA) &&
+                ^
+  symbol:   variable now
+  location: class Patient
+Patient.java:55: error: cannot find symbol
+                    now.isBefore(endB)) {
+                    ^
+  symbol:   variable now
+  location: class Patient
+4 errors
