@@ -16,11 +16,12 @@ public class Patient {
         if (this.medicine == null || this.clashingMedicine == null) {
             return 0;
         }
-        if (!isOverlapped(medicine, clashingMedicine, daysBeforeToday, now)) {
+        if (!isOverlapped(medicine, clashingMedicine
+                , daysBeforeToday, now)) {
             return 0;
         }
         return calculateOverlappedDays(medicine, clashingMedicine
-            , daysBeforeToday);
+            , daysBeforeToday, now);
     }
 
     private boolean isOverlapped(Medicine medicine

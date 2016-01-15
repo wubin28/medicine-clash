@@ -1,9 +1,3 @@
-Patient.java:22: error: method calculateOverlappedDays in class Patient cannot be applied to given types;
-        return calculateOverlappedDays(medicine, clashingMedicine
-               ^
-  required: Medicine,Medicine,long,LocalDate
-  found: Medicine,Medicine,long
-  reason: actual and formal argument lists differ in length
 PatientTest.java:17: error: method clash in class Patient cannot be applied to given types;
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90));
                    ^
@@ -34,4 +28,4 @@ PatientTest.java:81: error: method clash in class Patient cannot be applied to g
   required: List<String>,long,LocalDate
   found: List<String>,int
   reason: actual and formal argument lists differ in length
-6 errors
+5 errors
