@@ -1,5 +1,5 @@
 JUnit version 4.11-SNAPSHOT-20120416-1530
-I.>>>entering clash()
+.>>>entering clash()
 >>>entering isOverlapped()
 >>>startA: 2015-10-17
 >>>endA: 2016-01-15
@@ -7,8 +7,36 @@ I.>>>entering clash()
 >>>endB: 2016-01-15
 >>>entering calculateOverlappedDays()
 >>>startA is not after startB
-IIII
-Time: 0.101
+.>>>entering clash()
+>>>entering isOverlapped()
+>>>startA: 2015-10-16
+>>>endA: 2015-11-15
+>>>startB: 2015-09-18
+>>>endB: 2015-10-18
+>>>entering calculateOverlappedDays()
+.>>>entering clash()
+.>>>entering clash()
+>>>entering isOverlapped()
+>>>startA: 2015-12-16
+>>>endA: 2016-01-15
+>>>startB: 2015-12-06
+>>>endB: 2016-01-05
+>>>entering calculateOverlappedDays()
+.>>>entering clash()
+>>>entering isOverlapped()
+>>>startA: 2015-10-17
+>>>endA: 2015-11-16
+>>>startB: 2015-12-16
+>>>endB: 2016-01-15
+.>>>entering clash()
+>>>entering isOverlapped()
+>>>startA: 2016-01-14
+>>>endA: 2016-02-13
+>>>startB: 2016-01-10
+>>>endB: 2016-02-09
+>>>entering calculateOverlappedDays()
 
-OK (1 test)
+Time: 0.125
+
+OK (6 tests)
 
