@@ -1,13 +1,11 @@
-Patient.java:18: error: method isOverlapped in class Patient cannot be applied to given types;
-        if (!isOverlapped(medicine, clashingMedicine)) {
-             ^
-  required: Medicine,Medicine,long
-  found: Medicine,Medicine
-  reason: actual and formal argument lists differ in length
-Patient.java:21: error: method calculateOverlappedDays in class Patient cannot be applied to given types;
-        return calculateOverlappedDays(medicine, clashingMedicine
-               ^
-  required: Medicine,Medicine
-  found: Medicine,Medicine,long
-  reason: actual and formal argument lists differ in length
-2 errors
+JUnit version 4.11-SNAPSHOT-20120416-1530
+.E...
+Time: 0.114
+There was 1 failure:
+1) clash_when_medicines_taken_overlapping_start_of_period(PatientTest)
+java.lang.AssertionError: expected:<1> but was:<2>
+	at PatientTest.clash_when_medicines_taken_overlapping_start_of_period(PatientTest.java:64)
+
+FAILURES!!!
+Tests run: 4,  Failures: 1
+

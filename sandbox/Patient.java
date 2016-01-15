@@ -15,7 +15,7 @@ public class Patient {
         if (this.medicine == null || this.clashingMedicine == null) {
             return 0;
         }
-        if (!isOverlapped(medicine, clashingMedicine)) {
+        if (!isOverlapped(medicine, clashingMedicine, daysBeforeToday)) {
             return 0;
         }
         return calculateOverlappedDays(medicine, clashingMedicine
@@ -35,7 +35,8 @@ public class Patient {
     }
 
     private long calculateOverlappedDays(Medicine medicine
-            , Medicine clashingMedicine) {
+            , Medicine clashingMedicine
+            , long daysBeforeToday) {
         LocalDate startA = getStartDate(medicine);
         LocalDate endA = getEndDate(medicine);
         LocalDate startB = getStartDate(clashingMedicine);
