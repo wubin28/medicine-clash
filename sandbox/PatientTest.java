@@ -7,8 +7,9 @@ public class PatientTest {
 
     @Test
     public void no_clash_when_not_taking_both_medicines() {
+        LocalDate now = LocalDate.now();
         Prescription prescription = 
-            new Prescription(LocalDate.now().minusDays(30), 30);
+            new Prescription(now.minusDays(30), 30);
         Medicine codeine = new Medicine("Codeine", 
             Arrays.asList(prescription));
         Patient patient = new Patient(codeine, null);
@@ -20,11 +21,11 @@ public class PatientTest {
     @Test
     public void no_clash_when_no_overlap() {
         Prescription prescriptionCodeine = 
-            new Prescription(LocalDate.now().minusDays(90), 30);
+            new Prescription(now.minusDays(90), 30);
         Medicine codeine = new Medicine("Codeine", 
             Arrays.asList(prescriptionCodeine));
         Prescription prescriptionProzac = 
-            new Prescription(LocalDate.now().minusDays(30), 30);
+            new Prescription(now.minusDays(30), 30);
         Medicine prozac = new Medicine("Prozac", 
             Arrays.asList(prescriptionProzac));
         Patient patient = new Patient(codeine, prozac);
@@ -36,11 +37,11 @@ public class PatientTest {
     @Test
     public void clash_when_medicines_taken_overlapping() {
         Prescription prescriptionCodeine = 
-            new Prescription(LocalDate.now().minusDays(30), 30);
+            new Prescription(now.minusDays(30), 30);
         Medicine codeine = new Medicine("Codeine", 
             Arrays.asList(prescriptionCodeine));
         Prescription prescriptionProzac = 
-            new Prescription(LocalDate.now().minusDays(40), 30);
+            new Prescription(now.minusDays(40), 30);
         Medicine prozac = new Medicine("Prozac", 
             Arrays.asList(prescriptionProzac));
         Patient patient = new Patient(codeine, prozac);
@@ -52,11 +53,11 @@ public class PatientTest {
     @Test
     public void clash_when_medicines_taken_overlapping_start_of_period() {
         Prescription prescriptionCodeine = 
-            new Prescription(LocalDate.now().minusDays(91), 30);
+            new Prescription(now.minusDays(91), 30);
         Medicine codeine = new Medicine("Codeine", 
             Arrays.asList(prescriptionCodeine));
         Prescription prescriptionProzac = 
-            new Prescription(LocalDate.now().minusDays(119), 30);
+            new Prescription(now.minusDays(119), 30);
         Medicine prozac = new Medicine("Prozac", 
             Arrays.asList(prescriptionProzac));
         Patient patient = new Patient(codeine, prozac);
@@ -68,11 +69,11 @@ public class PatientTest {
     @Test
     public void clash_when_medicines_taken_overlapping_current_date() {
         Prescription prescriptionCodeine = 
-            new Prescription(LocalDate.now().minusDays(1), 30);
+            new Prescription(now.minusDays(1), 30);
         Medicine codeine = new Medicine("Codeine", 
             Arrays.asList(prescriptionCodeine));
         Prescription prescriptionProzac = 
-            new Prescription(LocalDate.now().minusDays(5), 30);
+            new Prescription(now.minusDays(5), 30);
         Medicine prozac = new Medicine("Prozac", 
             Arrays.asList(prescriptionProzac));
         Patient patient = new Patient(codeine, prozac);
