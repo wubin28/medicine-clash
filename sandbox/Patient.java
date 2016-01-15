@@ -21,7 +21,29 @@ public class Patient {
         return calculateOverlappedDays(medicine, clashingMedicine);
     }
 
-    private boolean isOverlapped(Medicine medicine, Medicine clashingMedicine) {
+    private boolean isOverlapped(Medicine medicine
+            , Medicine clashingMedicine) {
+        Prescription prescriptionA = 
+            medicine.getPrescriptions().get(0);
+        LocalDate startA = 
+            prescriptionA.getDispenseDate();
+        LocalDate endA = 
+            prescriptionA.getDispenseDate()
+                .plusDays(prescriptionA.getDaysSupply());
+        Prescription prescriptionB = 
+            clashingMedicine.getPrescriptions().get(0);
+        LocalDate startB = 
+            prescriptionB.getDispenseDate();
+        LocalDate endB = 
+            prescriptionB.getDispenseDate()
+                .plusDays(prescriptionB.getDaysSupply());
+        
+        return !(startA.isAfter(endB) || endA.isBefore(startB)) ? 
+            true : false;
+    }
+
+    private long calculateOverlappedDays(Medicine medicine
+            , Medicine clashingMedicine) {
         Prescription prescriptionA = 
             medicine.getPrescriptions().get(0);
         LocalDate startA = 
@@ -30,24 +52,6 @@ public class Patient {
             prescriptionA.getDispenseDate().plusDays(prescriptionA.getDaysSupply());
         Prescription prescriptionB = 
             clashingMedicine.getPrescriptions().get(0);
-        LocalDate startB = 
-            prescriptionB.getDispenseDate();
-        LocalDate endB = 
-            prescriptionB.getDispenseDate().plusDays(prescriptionB.getDaysSupply());
-        
-        return !(startA.isAfter(endB) || endA.isBefore(startB)) ? 
-            true : false;
-    }
-
-    private long calculateOverlappedDays(List<Medicine> clashingMedicines) {
-        Prescription prescriptionA = 
-            clashingMedicines.get(0).getPrescriptions().get(0);
-        LocalDate startA = 
-            prescriptionA.getDispenseDate();
-        LocalDate endA = 
-            prescriptionA.getDispenseDate().plusDays(prescriptionA.getDaysSupply());
-        Prescription prescriptionB = 
-            clashingMedicines.get(1).getPrescriptions().get(0);
         LocalDate startB = 
             prescriptionB.getDispenseDate();
         LocalDate endB = 
