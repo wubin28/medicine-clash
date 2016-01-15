@@ -1,61 +1,11 @@
-PatientTest.java:24: error: cannot find symbol
-            new Prescription(now.minusDays(90), 30);
-                             ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:28: error: cannot find symbol
-            new Prescription(now.minusDays(30), 30);
-                             ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:34: error: cannot find symbol
-            patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
-                                                                  ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:40: error: cannot find symbol
-            new Prescription(now.minusDays(30), 30);
-                             ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:44: error: cannot find symbol
-            new Prescription(now.minusDays(40), 30);
-                             ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:50: error: cannot find symbol
-            patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
-                                                                  ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:56: error: cannot find symbol
-            new Prescription(now.minusDays(91), 30);
-                             ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:60: error: cannot find symbol
-            new Prescription(now.minusDays(119), 30);
-                             ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:66: error: cannot find symbol
-            patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
-                                                                  ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:72: error: cannot find symbol
-            new Prescription(now.minusDays(1), 30);
-                             ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:76: error: cannot find symbol
-            new Prescription(now.minusDays(5), 30);
-                             ^
-  symbol:   variable now
-  location: class PatientTest
-PatientTest.java:82: error: cannot find symbol
-            patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
-                                                                  ^
-  symbol:   variable now
-  location: class PatientTest
-12 errors
+JUnit version 4.11-SNAPSHOT-20120416-1530
+.....E
+Time: 0.091
+There was 1 failure:
+1) clash_when_medicines_taken_overlapping_current_date(PatientTest)
+java.lang.AssertionError: expected:<1> but was:<115>
+	at PatientTest.clash_when_medicines_taken_overlapping_current_date(PatientTest.java:85)
+
+FAILURES!!!
+Tests run: 5,  Failures: 1
+
