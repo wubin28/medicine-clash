@@ -42,6 +42,7 @@ public class Patient {
             , Medicine clashingMedicine
             , long daysBeforeToday
             , LocalDate now) {
+        System.out.println(">>>entering calculateOverlappedDays()");
         LocalDate startA = getStartDate(medicine);
         LocalDate endA = getEndDate(medicine);
         LocalDate startB = getStartDate(clashingMedicine);
