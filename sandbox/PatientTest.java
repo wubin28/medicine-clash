@@ -51,6 +51,7 @@ public class PatientTest {
         assertEquals(20, 
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
+
     @Test @Ignore
     public void clash_when_medicines_taken_overlapping_start_of_period() {
         LocalDate now = LocalDate.now();
@@ -67,6 +68,7 @@ public class PatientTest {
         assertEquals(1, 
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
+
     @Test @Ignore
     public void clash_when_medicines_taken_overlapping_current_date() {
         LocalDate now = LocalDate.now();
@@ -83,6 +85,7 @@ public class PatientTest {
         assertEquals(1, 
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
+
     @Test
     public void clash_when_medicines_taken_continuously_with_the_same_period() {
         LocalDate now = LocalDate.now();

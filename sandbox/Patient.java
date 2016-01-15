@@ -28,6 +28,7 @@ public class Patient {
     private boolean isOverlapped(Medicine medicine
             , Medicine clashingMedicine
             , long daysBeforeToday, LocalDate now) {
+        System.out.println(">>>entering isOverlapped()");
         LocalDate startA = getStartDate(medicine);
         LocalDate endA = getEndDate(medicine);
         LocalDate startB = getStartDate(clashingMedicine);
