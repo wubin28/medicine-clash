@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class PatientTest {
 
-    @Test @Ignore
+    @Test
     public void no_clash_when_not_taking_both_medicines() {
         LocalDate now = LocalDate.now();
         Prescription prescription = 
@@ -18,7 +18,7 @@ public class PatientTest {
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
-    @Test @Ignore
+    @Test
     public void no_clash_when_no_overlap() {
         LocalDate now = LocalDate.now();
         Prescription prescriptionCodeine = 
@@ -35,7 +35,7 @@ public class PatientTest {
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
-    @Test @Ignore
+    @Test
     public void clash_when_medicines_taken_overlapping() {
         LocalDate now = LocalDate.now();
         Prescription prescriptionCodeine = 
@@ -52,7 +52,7 @@ public class PatientTest {
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
-    @Test @Ignore
+    @Test
     public void clash_when_medicines_taken_overlapping_start_of_period() {
         LocalDate now = LocalDate.now();
         Prescription prescriptionCodeine = 
@@ -69,7 +69,7 @@ public class PatientTest {
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
-    @Test @Ignore
+    @Test
     public void clash_when_medicines_taken_overlapping_current_date() {
         LocalDate now = LocalDate.now();
         Prescription prescriptionCodeine = 
@@ -86,7 +86,7 @@ public class PatientTest {
             patient.clash(Arrays.asList("Codeine", "Prozac"), 90, now));
     }
 
-    @Test
+    @Test @Ignore
     public void clash_when_medicines_taken_continuously_with_the_same_period() {
         LocalDate now = LocalDate.now();
         Medicine codeine = new Medicine("Codeine", 
